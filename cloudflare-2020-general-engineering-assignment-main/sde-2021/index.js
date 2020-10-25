@@ -81,7 +81,8 @@ const TitleTransformer = {
 
 const BackgroundTransformer = {
     element: el => {
-        el.setAttribute('style', 'background-image: linear-gradient(to bottom right, #D002FE)')
+        el.setAttribute('style', 'background: rgb(1,244,92);');
+        el.setAttribute('style', 'background: linear-gradient(30deg, rgba(1,244,92,1) 0%, rgba(0,239,255,1) 45%, rgba(0,93,255,1) 100%);');
     }
 }
 
@@ -110,7 +111,7 @@ const Rewriter = new HTMLRewriter()
     .on('div#links', new LinksTransformer(LINKS.API_LINKS))
     .on('div#social', new SocialLinksTransformer(LINKS.SOCIAL_LINKS))
     .on('title', TitleTransformer)
-    .on('body', BackgroundTransformer)
+    .on('body', BackgroundTransformer);
 // #endregion
 
 // #region API Handler
