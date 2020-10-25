@@ -1,3 +1,3 @@
 Leo Le's Deployed Worker:
-
--- https://mydeployedworker.mydomain.com
+-- Home Page: https://general-sde-2021.leolemain.workers.dev/
+-- Links Page: https://general-sde-2021.leolemain.workers.dev/links

@@ -1,6 +1,6 @@
-name = "sde-2021"
-type = "javascript"
-account_id = ""
+name = "general-sde-2021"
+type = "webpack"
+account_id = "2f9d34ae107fe51e66cc3b3c58a7a509"
 workers_dev = true
 route = ""
 zone_id = ""
