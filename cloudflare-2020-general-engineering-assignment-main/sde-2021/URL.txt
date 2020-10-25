@@ -1,0 +1,3 @@
+Leo Le's Deployed Worker:
+
+-- https://mydeployedworker.mydomain.com
