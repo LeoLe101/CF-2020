@@ -12,8 +12,6 @@ import (
 // DEBUG - Global debug flag
 var DEBUG = false
 
-// Reference for PEM file: https://gist.github.com/exAspArk/f738f0771e2675e7f4c3b5d11403efd8
-
 // ClientManager - Hold information to make the connection between this client and wrangler worker possible
 type ClientManager struct {
 	// Private
@@ -164,21 +162,9 @@ func errHelper(message string, err error) {
 	fmt.Println()
 }
 
-// tlsConfig - Configurate the TLS handshake certification file
+// tlsConfig - Configurate the TLS handshake
 func tlsConfig() (*tls.Config, error) {
-	// NOTE: Attempted to make Handshake certification authorization file to communicate between HTTPS, but failed
-
-	// crt, err := ioutil.ReadFile("./certs/public.crt")
-	// if err != nil {
-	// 	errHelper("Error while reading certification file", err)
-	// 	return nil, err
-	// }
-
-	// rootCAs := x509.NewCertPool()
-	// rootCAs.AppendCertsFromPEM(crt)
-
 	return &tls.Config{
-		// RootCAs: rootCAs,
 		InsecureSkipVerify: true,
 	}, nil
 }

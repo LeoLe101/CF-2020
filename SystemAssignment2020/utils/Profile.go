@@ -90,6 +90,7 @@ func (p *Profile) PrintInfo() {
 	}
 
 	// Calculate Success rate percentage
+	p.requestSuccessRate = ((p.numberRequest - len(p.errorList)) / p.numberRequest) * 100
 
 	// Print Result
 	fmt.Println("Number of Request: ", p.numberRequest)
@@ -107,6 +108,7 @@ func (p *Profile) PrintInfo() {
 		}
 	}
 
+	fmt.Println("Successful Rate: ", p.requestSuccessRate, "%")
 	fmt.Println("Smallest Response Byte Size: ", p.minSize)
 	fmt.Println("Largest Response Byte Size: ", p.maxSize)
 }
